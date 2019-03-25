@@ -4,6 +4,8 @@ var app = express();
 const from_api = require('./challengeapi.js');
 fs = require('fs');
 
+const port = process.env.PORT || 8080;
+
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
@@ -91,6 +93,6 @@ app.get('/404', (request, response) => {
         error: 'page not found'
     })
 });
-app.listen(8080, () => {
-    console.log('server is up on the port 8080');
+app.listen(port, () => {
+    console.log(`server is up on the port ${port}`);
 });
