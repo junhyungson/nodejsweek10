@@ -34,13 +34,13 @@ app.use((request, response, next) => {
     next();
 });
 
-app.use((request, response, next) =>{
-    var log = 'the site is currently down for a maintenance';
-    response.render('maintenance.hbs', {
-        maintenance: log
-    });
-    // next();
-});
+// app.use((request, response, next) =>{
+//     var log = 'the site is currently down for a maintenance';
+//     response.render('maintenance.hbs', {
+//         maintenance: log
+//     });
+//     // next();
+// });
 
 app.get('/', (request, response) => {
     // response.send('<a href="about.hbs">about</a> <a href="weather.hbs">weather</a>');
